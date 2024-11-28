@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MNIST Neural Network Project Overview
 
-## Getting Started
+Next.js application that implements a neural network for digit recognition using the MNIST dataset.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Project Overview](#project-overview)
+- [Project Structure](#project-structure)
+- [Key Features](#key-features)
+- [Core Components](#core-components)
+- [Technologies Used](#technologies-used)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `app/`: Contains the main application files (layout, page, global styles)
+- `components/`: React components for the user interface
+  - `ui/`: Reusable UI components by Shadcn/ui (buttons, cards, dialogs, etc.)
+  - Custom components for the neural network interface
+- `lib/`: Utility function by Shadcn/ui
+- Configuration files: Next.js, TypeScript, Tailwind CSS, ESLint, etc.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Features
 
-## Learn More
+1. **Neural Network Implementation**: The project includes a custom implementation of a neural network for digit recognition.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Interactive User Interface**: Components like `PixelInput` and `MNISTOutput` provide an interactive way for users to draw digits and see predictions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Multiple Model Support**: The application supports multiple trained models, allowing users to compare different versions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Responsive Design**: The UI is built with responsiveness in mind, using Tailwind CSS for styling.
 
-## Deploy on Vercel
+5. **Accessibility**: The project includes accessibility features, such as proper ARIA attributes and keyboard navigation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6. **Performance Optimization**: The code includes optimizations like memoization and efficient rendering techniques.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Core Components
+
+- `Interface`: The main component that combines the drawing input and prediction output.
+- `PixelInput`: Allows users to draw digits on a canvas.
+- `MNISTOutput`: Displays the neural network's predictions and probabilities.
+- `ProbabilityChart`: Visualizes the prediction probabilities.
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Recharts (for data visualization)
+- Shadcn UI (for UI components)
+- Custom neural network implementation
